@@ -2,26 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
-## Development server
+## Author
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+*Miguel Bogota*
+#### Find me around the web 🌎
 
-## Code scaffolding
+<p>
+  <a href="https://gitlab.com/miguelbogota">
+    <img height="30" src="https://gitlab.com/miguelbogota/miguelbogota/-/raw/master/gitlab.png" alt="GitLab link to profile" />
+  </a>&nbsp;&nbsp;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  <a href="https://dev.to/miguelbogota">
+    <img height="30" src="https://gitlab.com/miguelbogota/miguelbogota/-/raw/master/dev.png" alt="Dev.to link to profile" />
+  </a>&nbsp;&nbsp;
 
-## Build
+  <a href="https://instagram.com/migue_bogota/">
+    <img height="30" src="https://gitlab.com/miguelbogota/miguelbogota/-/raw/master/instagram.jpg" alt="Instagram link to profile" />
+  </a>&nbsp;&nbsp;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  <a href="https://linkedin.com/in/miguelbogota">
+    <img height="30" src="https://gitlab.com/miguelbogota/miguelbogota/-/raw/master/linkedin.png" alt="LinkedIn link to profile" />
+  </a>&nbsp;&nbsp;
 
-## Running unit tests
+  <a href="https://github.com/miguelbogota">
+    <img height="30" src="https://gitlab.com/miguelbogota/miguelbogota/-/raw/master/github.png" alt="GitHub link to profile" />
+  </a>
+</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+See also the list of [contributors](https://github.com/miguelbogota/nvc-movies/graphs/contributors) who participated in this project.
