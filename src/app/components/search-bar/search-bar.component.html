@@ -1,0 +1,19 @@
+<!-- Search box -->
+<div class="searchbox">
+  <!-- Form for the search function -->
+  <form (ngSubmit)="search()">
+
+    <!-- Input to type the query -->
+    <input type="text" class="searchbox-input" placeholder="Search..." [formControl]="searchInput" />
+    <!-- Submit button -->
+    <button class="searchbox-icon">
+      <i class='bx bx-search'></i>
+    </button>
+
+  </form>
+</div>
+
+<!-- Error message -->
+<div class="errorMessage" *ngIf="hasError">
+  {{ hasError }}
+</div>

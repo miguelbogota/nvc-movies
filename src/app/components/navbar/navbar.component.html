@@ -1,0 +1,27 @@
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light pl-3 pl-md-4">
+
+  <!-- Main page -->
+  <button class="mr-2" mat-flat-button color="primary" [routerLink]="['/']" *ngIf="showBackButton">Back</button>
+  <a class="navbar-brand" [routerLink]="['/']">SHOWS</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapse content -->
+  <div class="collapse navbar-collapse" id="navbarMain">
+    <!-- Navigation -->
+    <div class="navbar-nav ml-auto">
+
+      <!-- Settings link -->
+      <a class="settings ml-auto mt-3 mt-lg-0 mb-2 mb-lg-0" [routerLink]="['/settings']"><i class='bx bx-cog'></i></a>
+
+      <!-- Search bar -->
+      <app-search-bar></app-search-bar>
+
+    </div>
+  </div>
+
+</nav>

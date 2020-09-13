@@ -1,0 +1,42 @@
+<!-- Loading screen -->
+<ng-container *ngIf="isLoading; else loaded">
+  <div class="h3 text-center text-muted mt-5 pt-5">
+    Loading...
+  </div>
+</ng-container>
+
+<!-- Loading screen -->
+<ng-container *ngIf="errorMessage && !isLoading">
+  <div class="h3 text-center text-muted mt-5 pt-5">
+    {{ errorMessage }}
+  </div>
+</ng-container>
+
+<!-- Loaded information -->
+<ng-template #loaded>
+
+  <!-- Title for trending shows -->
+  <h2 class="h3 text-center mt-3">Results</h2>
+  <!-- Trending -->
+  <div class="row">
+    <div class="col-lg-3 col-md-4 p-4 p-sm-0" *ngFor="let show of searchResults">
+      <app-card [show]="show"></app-card>
+    </div>
+  </div>
+
+  <div
+    infiniteScroll
+    infiniteScrollDistance="1"
+    infiniteScrollThrottle="1000"
+    (scrolled)="getMoreShows()"
+    >
+  </div>
+
+  <!-- Loading screen -->
+  <ng-container *ngIf="isLoadingMore">
+    <div class="h4 text-center text-muted py-5 mb-5">
+      Loading more shows...
+    </div>
+  </ng-container>
+
+</ng-template>

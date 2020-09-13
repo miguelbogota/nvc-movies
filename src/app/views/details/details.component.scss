@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  .card {
+    position: relative;
+    .card-img-top {
+      min-height: 100px;
+    }
+    .fil-over {
+      filter: brightness(0.3);
+    }
+    .over-btn {
+      position: absolute;
+      top: 0.7rem;
+      left: 0.7rem;
+      font-size: 28px;
+      height: 60px;
+      width: 60px;
+      min-width: unset;
+      max-width: unset;
+      padding: 0px;
+    }
+    .over {
+      padding-top: 87px;
+    }
+  }
+  .pag {
+    width: 100%;
+    overflow: auto;
+  }
+}

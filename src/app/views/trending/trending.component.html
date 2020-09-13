@@ -1,0 +1,46 @@
+<!-- Loading screen -->
+<ng-container *ngIf="isLoadingTrending && isLoadingDiscover; else loaded">
+  <div class="h3 text-center text-muted mt-5 pt-5">
+    Loading...
+  </div>
+</ng-container>
+
+<!-- Loaded information -->
+<ng-template #loaded>
+
+  <!-- Title for trending shows -->
+  <h2 class="h3 text-center mt-3">Trending shows</h2>
+  <!-- Trending -->
+  <div class="row">
+    <div class="col-lg-3 col-md-4 p-4 p-sm-0" *ngFor="let show of trendingShows">
+      <app-card [show]="show"></app-card>
+    </div>
+  </div>
+
+  <hr class="mt-5" />
+
+  <!-- Title for discover shows -->
+  <h2 class="h3 text-center mt-3">Discover new shows</h2>
+  <!-- Discover -->
+  <div class="row">
+    <div class="col-lg-3 col-md-4 p-4 p-sm-0" *ngFor="let show of discoverShows">
+      <app-card [show]="show"></app-card>
+    </div>
+  </div>
+
+  <div
+    infiniteScroll
+    infiniteScrollDistance="1"
+    infiniteScrollThrottle="1000"
+    (scrolled)="getMoreShows()"
+    >
+  </div>
+
+  <!-- Loading screen -->
+  <ng-container *ngIf="isLoadingMore">
+    <div class="h4 text-center text-muted py-5 mb-5">
+      Loading more shows...
+    </div>
+  </ng-container>
+
+</ng-template>

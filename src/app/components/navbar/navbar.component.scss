@@ -1,0 +1,23 @@
+:host {
+  display: block;
+
+  .navbar-toggler {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: tranparent;
+  }
+
+  .settings {
+    color: var(--gray);
+    font-size: 1.3rem;
+    padding: 6px;
+    border-radius: 50px;
+    margin-right: 10px;
+    width: 42px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: tranparent;
+    text-decoration: none !important;
+  }
+}

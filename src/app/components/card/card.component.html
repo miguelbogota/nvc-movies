@@ -1,0 +1,19 @@
+<!-- Card container for shows -->
+<div class="card mx-auto mb-3" style="width: 18rem;" [routerLink]="['/show/' + show.id + '/1']">
+  <!-- Movie / TV Poster -->
+  <img class="card-img-top" [src]="image" alt="Card image cap">
+
+  <!-- Content -->
+  <div class="card-body p-2">
+    <h5 class="card-title m-0">{{ show.name }}</h5>
+
+    <div class="hidden-info">
+      <div *ngFor="let actor of actors">
+        {{ actor.name }}
+      </div>
+      <rating [(ngModel)]="show.vote_average" [max]="10" [readonly]="true" style="pointer-events: none;"></rating>
+      <p>{{ show.vote_average }}</p>
+    </div>
+
+  </div>
+</div>

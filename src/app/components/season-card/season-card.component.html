@@ -1,0 +1,25 @@
+<!-- Loading screen -->
+<ng-container *ngIf="isLoading; else loaded">
+  <div class="h5 text-muted ml-3 pt-3">
+    Loading episodes...
+  </div>
+</ng-container>
+
+<ng-template #loaded>
+  <mat-accordion>
+    <ng-container *ngIf="seasonToShow">
+      <mat-expansion-panel *ngFor="let episode of seasonToShow.episodes">
+        <mat-expansion-panel-header style="font-weight: 500;">
+          <mat-panel-title style="max-width: 12px;">
+            {{ episode.episode_number }}
+          </mat-panel-title>
+          <mat-panel-description style="color: rgba(0,0,0,.87);">
+            {{  episode.name }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{ episode.overview }}</p>
+        <p>⭐ {{ episode.vote_average }}</p>
+      </mat-expansion-panel>
+    </ng-container>
+  </mat-accordion>
+</ng-template>

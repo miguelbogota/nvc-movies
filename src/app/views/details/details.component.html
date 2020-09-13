@@ -1,0 +1,61 @@
+<!-- Show only when the show is loaded -->
+<ng-container *ngIf="!show; else loaded">
+  <div class="h3 text-center text-muted mt-5 pt-5">
+    Loading show...
+  </div>
+</ng-container>
+
+<!-- Loaded screen -->
+<ng-template #loaded>
+  <div class="row mb-5">
+    <div class="col-lg-5">
+
+      <div class="card w-100 p-2">
+        <!-- TV Poster -->
+        <img class="card-img-top" [src]="image" [ngClass]="{'fil-over': showOverview}"
+          style="transition: filter 0.3s linear;">
+
+        <!-- Content -->
+        <div class="card-body p-2">
+          <h5 class="card-title m-0">{{ show.name }}</h5>
+        </div>
+
+        <!-- Hidden content -->
+        <div class="card-img-overlay text-light over" *ngIf="showOverview">
+          <h5 class="card-title">{{ show.name }}</h5>
+          <p class="card-text">{{ show.overview }}</p>
+          <p class="card-text mb-0"><span class="h5">Country:</span> {{ show.origin_country }}</p>
+          <p class="card-text mb-0"><span class="h5">Rating:</span> {{ show.vote_average }}</p>
+          <p class="card-text mb-0"><span class="h5">Popularity:</span> {{ show.popularity }}</p>
+        </div>
+
+        <!-- Toggle overview button -->
+        <button mat-mini-fab color="primary" class="over-btn" (click)="toggleOverview()">
+          <i class='bx bx-info-circle'></i>
+        </button>
+
+      </div>
+
+    </div>
+    <div class="col-lg-7">
+
+      <h3 class="h3 mt-3">Seasons</h3>
+      <!-- Pagination for the seasons -->
+      <div class="pag mb-3">
+        <ul class="pagination pagination">
+          <li class="page-item" routerLinkActive="active" *ngFor="let season of show.seasons">
+            <a class="page-link" [routerLink]="['/show/' + showId + '/' + season.season_number]">
+              {{ season.season_number }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Show the first season by default -->
+      <ng-container *ngIf="seasonDisplay >= 0">
+        <app-season-card></app-season-card>
+      </ng-container>
+
+    </div>
+  </div>
+</ng-template>
